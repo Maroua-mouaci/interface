@@ -9,18 +9,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<<<<<<< HEAD
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-      prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f6f0ed;"
-      xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="transport.control.ViewFareMediaController">
-=======
 <?import javafx.scene.layout.AnchorPane?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f6f0ed;"
             xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="your.package.ViewFareMediaController">
->>>>>>> 8b306ef72eac9bc0181e554256839715b1efdcd1
+            fx:controller="transport.control.ViewFareMediaController">
 
     <children>
         <Label layoutX="198.0" layoutY="53.0" text="VIEW FARE MEDIA" textFill="#7ea8be">
@@ -35,24 +28,6 @@
             </font>
         </Label>
 
-<<<<<<< HEAD
-        <TableView fx:id="fareTable" layoutX="8.0" layoutY="106.0" prefHeight="200.0" prefWidth="585.0">
-            <columns>
-                <TableColumn fx:id="idColumn" prefWidth="50" text="ID" />
-                <TableColumn fx:id="typeColumn" prefWidth="95" text="Type" />
-                <TableColumn fx:id="priceColumn" prefWidth="103" text="Price" />
-                <TableColumn fx:id="dateColumn" prefWidth="135" text="Purchase Date" />
-                <TableColumn fx:id="paymentColumn" prefWidth="125" text="Payment Method" />
-            </columns>
-        </TableView>
-
-        <Button fx:id="refreshButton" layoutX="218.0" layoutY="326.0" mnemonicParsing="false"
-                prefHeight="25.0" prefWidth="165.0"
-                style="-fx-background-color: #7ea8be; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-color: #28536b;"
-                text="Refresh List" textFill="WHITE" />
-    </children>
-</Pane>
-=======
         <Button fx:id="btnRefresh" layoutX="218.0" layoutY="326.0" mnemonicParsing="false"
                 onAction="#handleRefreshList"
                 prefHeight="25.0" prefWidth="165.0"
@@ -79,4 +54,3 @@
         </ImageView>
     </children>
 </AnchorPane>
->>>>>>> 8b306ef72eac9bc0181e554256839715b1efdcd1
