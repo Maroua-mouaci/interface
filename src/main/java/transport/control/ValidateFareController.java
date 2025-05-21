@@ -1,9 +1,13 @@
 package transport.control;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import transport.core.*;
 import java.io.BufferedReader;
 import java.io.File;
@@ -47,6 +51,16 @@ public class ValidateFareController {
             LocalDate today = LocalDate.now();
             String validationResult = validateFare(fare, today);
             showAlert("Validation Result", validationResult, Alert.AlertType.INFORMATION);
+
+
+            if (validationResult.startsWith("✅")) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/acceuil.fxml"));
+                Parent root = loader.load();
+                Stage stage = (Stage) validateButton.getScene().getWindow();
+                stage.setScene(new Scene(root));
+                stage.show();
+            }
+
 
         } catch (NumberFormatException e) {
             showAlert("Error", "Invalid ID format. Please enter a number", Alert.AlertType.ERROR);
