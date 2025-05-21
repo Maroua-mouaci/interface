@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -10,59 +9,54 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="transport.control.AccueilController"
-            prefWidth="600" prefHeight="400"
-            style="-fx-background-color: #f6f0ed;">
+<AnchorPane prefHeight="400" prefWidth="600" style="-fx-background-color: #f6f0ed;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="transport.control.AccueilController">
 
-   <VBox spacing="10" alignment="TOP_CENTER"
-         AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+   <VBox alignment="TOP_CENTER" layoutX="20.0" layoutY="-29.0" spacing="10" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="-29.0">
 
-      <ImageView fitHeight="150.0" fitWidth="200.0" preserveRatio="true">
+      <ImageView fitHeight="129.0" fitWidth="150.0" preserveRatio="true">
          <image>
-            <Image url="@assets/ESI-RUN_logo_transparent.png"/>
+            <Image url="@assets/ESI-RUN_logo_transparent.png" />
          </image>
       </ImageView>
 
       <Label text="  STATION AGENT PORTAL " textFill="#7ea8be">
          <font>
-            <Font name="System Bold" size="24.0"/>
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
 
       <Label text="Gérez facilement les titres de transport de vos usagers" textFill="#28536b">
          <font>
-            <Font size="13.0"/>
+            <Font size="13.0" />
          </font>
       </Label>
       <Label text="depuis cette interface simple et intuitive." textFill="#28536b">
          <font>
-            <Font size="13.0"/>
+            <Font size="13.0" />
          </font>
       </Label>
 
-      <HBox alignment="CENTER" spacing="30" padding="20">
-         <VBox spacing="10">
-            <Button text="Add User" onAction="#goToUserType" prefWidth="172" prefHeight="36" textFill="WHITE"
-                    style="-fx-background-color: #7ea8be; -fx-border-color: #28536b; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-border-width: 0.5px; -fx-font-size: 14px;"/>
-            <Button text="Purchase Fare Medium" onAction="#goToAcheterTitre" prefWidth="172" prefHeight="36" textFill="WHITE"
-                    style="-fx-background-color: #7ea8be; -fx-border-color: #28536b; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-border-width: 0.5px; -fx-font-size: 14px;"/>
-            <Button text="View Fare Media" onAction="#goToListeTitre" prefWidth="172" prefHeight="36" textFill="WHITE"
-                    style="-fx-background-color: #7ea8be; -fx-border-color: #28536b; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-border-width: 0.5px; -fx-font-size: 14px;"/>
-         </VBox>
-         <VBox spacing="10">
-            <Button text="Validate Fare Medium" onAction="#goToValiderTitre" prefWidth="172" prefHeight="36" textFill="WHITE"
-                    style="-fx-background-color: #7ea8be; -fx-border-color: #28536b; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-border-width: 0.5px; -fx-font-size: 14px;"/>
-            <Button text="Register Complaint" onAction="#goToAjouterReclamation" prefWidth="172" prefHeight="36" textFill="WHITE"
-                    style="-fx-background-color: #7ea8be; -fx-border-color: #28536b; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-border-width: 0.5px; -fx-font-size: 14px;"/>
-            <Button text="View Complaints" onAction="#goToRecordedComplains" prefWidth="172" prefHeight="36" textFill="WHITE"
-                    style="-fx-background-color: #7ea8be; -fx-border-color: #28536b; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-border-width: 0.5px; -fx-font-size: 14px;"/>
-         </VBox>
-      </HBox>
+      <!-- VBox container with background behind buttons -->
+      <VBox alignment="CENTER" prefHeight="152.0" prefWidth="486.0" spacing="10" style="-fx-background-color: #c2948a; -fx-background-radius: 10px; -fx-padding: 20;">
 
-      <Button text="Exit" onAction="#handleExit" prefWidth="172" prefHeight="36" textFill="WHITE"
-              style="-fx-background-color: #7ea8be; -fx-border-color: #28536b; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-border-width: 0.5px; -fx-font-size: 14px;"/>
+
+         <HBox alignment="CENTER" prefHeight="112.0" prefWidth="456.0" spacing="30">
+
+            <VBox spacing="10">
+               <Button onAction="#goToUserType" prefHeight="36" prefWidth="172" style="-fx-background-color: #7ea8be; -fx-border-color: #28536b; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-border-width: 0.5px; -fx-font-size: 14px;" text="Add User" textFill="WHITE" />
+               <Button onAction="#goToAcheterTitre" prefHeight="36" prefWidth="172" style="-fx-background-color: #7ea8be; -fx-border-color: #28536b; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-border-width: 0.5px; -fx-font-size: 14px;" text="Purchase Fare Medium" textFill="WHITE" />
+               <Button onAction="#goToListeTitre" prefHeight="36" prefWidth="172" style="-fx-background-color: #7ea8be; -fx-border-color: #28536b; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-border-width: 0.5px; -fx-font-size: 14px;" text="View Fare Media" textFill="WHITE" />
+            </VBox>
+
+            <VBox spacing="10">
+               <Button onAction="#goToValiderTitre" prefHeight="36" prefWidth="172" style="-fx-background-color: #7ea8be; -fx-border-color: #28536b; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-border-width: 0.5px; -fx-font-size: 14px;" text="Validate Fare Medium" textFill="WHITE" />
+               <Button onAction="#goToAjouterReclamation" prefHeight="36" prefWidth="172" style="-fx-background-color: #7ea8be; -fx-border-color: #28536b; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-border-width: 0.5px; -fx-font-size: 14px;" text="Register Complaint" textFill="WHITE" />
+         
+                     <Button onAction="#handleExit" prefHeight="36" prefWidth="172" style="-fx-background-color: #7ea8be; -fx-border-color: #28536b; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-border-width: 0.5px; -fx-font-size: 14px;" text="Exit" textFill="WHITE" />
+            </VBox>
+
+         </HBox>
+      </VBox>
    </VBox>
 
 </AnchorPane>
