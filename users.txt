@@ -1,0 +1,4 @@
+USAGER,USR-1001,Maroua,Mouaci,2005-07-15,false
+USAGER,USR-1002,no,one,2025-05-01,true
+EMPLOYEE,abcd,hello,hello,2025-05-13,true,AGENT
+EMPLOYEE,kkkk,hi,hi,2025-05-01,false,CONDUCTEUR

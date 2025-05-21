@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<<<<<<< HEAD
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f6f0ed;"
+      xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="transport.control.ViewFareMediaController">
+=======
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f6f0ed;"
+            xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="your.package.ViewFareMediaController">
+>>>>>>> 8b306ef72eac9bc0181e554256839715b1efdcd1
+
+    <children>
+        <Label layoutX="198.0" layoutY="53.0" text="VIEW FARE MEDIA" textFill="#7ea8be">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="230.0" layoutY="105.0" text="Trier par date (récent → ancien)" textFill="#6b6969">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+
+<<<<<<< HEAD
+        <TableView fx:id="fareTable" layoutX="8.0" layoutY="106.0" prefHeight="200.0" prefWidth="585.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="50" text="ID" />
+                <TableColumn fx:id="typeColumn" prefWidth="95" text="Type" />
+                <TableColumn fx:id="priceColumn" prefWidth="103" text="Price" />
+                <TableColumn fx:id="dateColumn" prefWidth="135" text="Purchase Date" />
+                <TableColumn fx:id="paymentColumn" prefWidth="125" text="Payment Method" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="refreshButton" layoutX="218.0" layoutY="326.0" mnemonicParsing="false"
+                prefHeight="25.0" prefWidth="165.0"
+                style="-fx-background-color: #7ea8be; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-color: #28536b;"
+                text="Refresh List" textFill="WHITE" />
+    </children>
+</Pane>
+=======
+        <Button fx:id="btnRefresh" layoutX="218.0" layoutY="326.0" mnemonicParsing="false"
+                onAction="#handleRefreshList"
+                prefHeight="25.0" prefWidth="165.0"
+                style="-fx-background-color: #7ea8be; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-color: #28536b;"
+                text="Refresh List" textFill="WHITE" />
+
+        <TableView fx:id="tableFareMedia" layoutX="8.0" layoutY="106.0"
+                   prefHeight="200.0" prefWidth="585.0" style="-fx-background-color: #7ea8be;">
+            <columns>
+                <TableColumn fx:id="colID" prefWidth="46.0" text="ID" />
+                <TableColumn fx:id="colType" prefWidth="93.3" text="Type" />
+                <TableColumn fx:id="colOwner" prefWidth="117.3" text="Owner" />
+                <TableColumn fx:id="colPrice" prefWidth="102.7" text="Price" />
+                <TableColumn fx:id="colPurchaseDate" prefWidth="100.7" text="Purchase Date" />
+                <TableColumn fx:id="colPaymentMethod" prefWidth="123.7" text="Payment Method" />
+            </columns>
+        </TableView>
+
+        <ImageView fitHeight="101.0" fitWidth="90.0" layoutX="-5.0" layoutY="332.0"
+                   pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@assets/ESI-RUN_logo_transparent.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>
+>>>>>>> 8b306ef72eac9bc0181e554256839715b1efdcd1

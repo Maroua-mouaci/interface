@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f6f0ed;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="176.0" layoutY="63.0" prefHeight="35.0" prefWidth="270.0" text="REGISTER COMPLAINT" textFill="#7ea8be">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="154.0" layoutY="108.0" opacity="0.38" prefHeight="229.0" prefWidth="304.0" style="-fx-background-color: #c2948a; -fx-background-radius: 10px;" />
+      <ComboBox layoutX="274.0" layoutY="138.0" prefHeight="25.0" prefWidth="162.0" promptText="TECHNICAL  PAYMENT  SERVICE" style="-fx-background-color: #348aa7;">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Junior" />
+               <String fx:value="Senior" />
+               <String fx:value="Solidarite" />
+               <String fx:value="partenaire" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <TextField alignment="CENTER" layoutX="275.0" layoutY="244.0" prefHeight="28.0" prefWidth="162.0" style="-fx-border-color: #28536b; -fx-background-radius: 5px; -fx-border-radius: 5px;" />
+      <TextField alignment="CENTER" layoutX="275.0" layoutY="193.0" prefHeight="28.0" prefWidth="162.0" style="-fx-border-color: #28536b; -fx-background-radius: 5px; -fx-border-radius: 5px;" />
+      <Label layoutX="186.0" layoutY="142.0" text="Type:" textFill="#28536b" />
+      <Label layoutX="187.0" layoutY="199.0" text="Concerne(e):" textFill="#28536b" />
+      <Label layoutX="188.0" layoutY="250.0" text="Description:" textFill="#28536b" />
+      <Button layoutX="229.0" layoutY="293.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="162.0" style="-fx-background-color: #7ea8be; -fx-border-color: #28536b; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Submit" textFill="WHITE" />
+   </children>
+</Pane>
