@@ -3,9 +3,14 @@ package transport.control;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 import transport.core.*;
-import java.io.*;
+
+import java.io.IOException;
 import java.util.List;
 
 public class PurchaseFareController {
@@ -122,7 +127,21 @@ public class PurchaseFareController {
         } catch (IOException e) {
             showAlert(Alert.AlertType.ERROR, "Save Error", "❌ Could not save the fare to file.");
         }
+
+        // Return to Accueil.fxml
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/transport/view/Accueil.fxml"));
+            Parent accueilRoot = loader.load();
+            Scene scene = new Scene(accueilRoot);
+            Stage stage = (Stage) userComboBox.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Error: Could not load Accueil.fxml.");
+        }
     }
+
     private String formatFareMessage(TitreTransport fare) {
         return switch (fare) {
             case Ticket t -> String.format("""
