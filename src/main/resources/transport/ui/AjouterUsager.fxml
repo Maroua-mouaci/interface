@@ -9,18 +9,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<<<<<<< HEAD
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-      prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #f6f0ed;"
-      xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="transport.control.AjouterUsagerController">
-=======
 <?import javafx.scene.layout.AnchorPane?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f6f0ed;"
             xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="transport.control.AjouterUsagerController">
->>>>>>> 8b306ef72eac9bc0181e554256839715b1efdcd1
    <children>
       <Label layoutX="226.0" layoutY="70.0" prefHeight="28.0" prefWidth="207.0"
              text="ADD USAGER" textFill="#7ea8be">
@@ -28,22 +21,6 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-<<<<<<< HEAD
-      <VBox layoutX="155.0" layoutY="112.0" opacity="0.38" prefHeight="240.0" prefWidth="301.0"
-            style="-fx-background-color: #c2948a; -fx-background-radius: 10px;" />
-
-      <TextField fx:id="txtNom" layoutX="262.0" layoutY="130.0" prefHeight="28.0" prefWidth="162.0"
-                 style="-fx-border-color: #28536b; -fx-background-radius: 5px; -fx-border-radius: 5px;"
-                 promptText="Enter name" />
-      <TextField fx:id="txtPrenom" layoutX="262.0" layoutY="174.0" prefHeight="28.0" prefWidth="162.0"
-                 style="-fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-color: #28536b;"
-                 promptText="Enter surname" />
-
-      <DatePicker fx:id="datePicker" layoutX="262.0" layoutY="218.0" prefHeight="25.0" prefWidth="162.0"
-                  style="-fx-background-color: #348aa7;" />
-      <CheckBox fx:id="chkHandicape" layoutX="262.0" layoutY="258.0" mnemonicParsing="false"
-                text="Handicapped" />
-=======
       <VBox layoutX="155.0" layoutY="112.0" opacity="0.38" prefHeight="180.0" prefWidth="301.0"
             style="-fx-background-color: #c2948a; -fx-background-radius: 10px;" />
 
@@ -53,18 +30,10 @@
       <TextField fx:id="txtPrenom" alignment="TOP_LEFT" layoutX="262.0" layoutY="174.0"
                  prefHeight="28.0" prefWidth="162.0" promptText="Enter surname"
                  style="-fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-color: #28536b;" />
->>>>>>> 8b306ef72eac9bc0181e554256839715b1efdcd1
 
-      <Label layoutX="184.0" layoutY="135.0" text="Name:" textFill="#28536b" />
       <Label layoutX="183.0" layoutY="179.0" text="Surname:" textFill="#28536b" />
-      <Label layoutX="183.0" layoutY="223.0" text="Birth Date:" textFill="#28536b" />
+      <Label layoutX="184.0" layoutY="135.0" text="Name:" textFill="#28536b" />
 
-<<<<<<< HEAD
-      <Button fx:id="btnSave" layoutX="263.0" layoutY="300.0" mnemonicParsing="false"
-              onAction="#handleSaveUsager" prefHeight="25.0" prefWidth="162.0"
-              style="-fx-background-color: #7ea8be; -fx-border-color: #28536b; -fx-background-radius: 5px; -fx-border-radius: 5px;"
-              text="Save User" textFill="WHITE" />
-=======
       <DatePicker fx:id="datePicker" layoutX="263.0" layoutY="216.0" prefHeight="25.0" prefWidth="162.0"
                   promptText="Enter birth date" style="-fx-background-color: #28536b;" />
       <Label layoutX="184.0" layoutY="223.0" text="Birth Date:" textFill="#28536b" />
@@ -76,6 +45,5 @@
               prefHeight="25.0" prefWidth="162.0"
               style="-fx-background-color: #7ea8be; -fx-border-color: #28536b; -fx-background-radius: 5px; -fx-border-radius: 5px;"
               text="Save Usager" textFill="WHITE" />
->>>>>>> 8b306ef72eac9bc0181e554256839715b1efdcd1
    </children>
 </AnchorPane>
