@@ -2,8 +2,12 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.HBox?>
@@ -19,12 +23,16 @@
    <Label style="-fx-font-size: 24px; -fx-text-fill: #7ea8be; -fx-font-weight: bold;" text="+ REGISTER COMPLAINT" textFill="#7ea8be">
       <font>
          <Font name="System Bold" size="24.0" />
-      </font></Label>
+      </font>
+   </Label>
 
-               <!-- User ID input -->
-   <TextField fx:id="userIdField" prefHeight="30" prefWidth="420" promptText="Enter User ID" style="-fx-border-color: #28536b; -fx-border-width: 2; -fx-background-radius: 8; -fx-border-radius: 8;" />
+   <!-- Personal info fields -->
+   <TextField fx:id="nomField" prefHeight="30" prefWidth="420" promptText="Nom" style="-fx-border-color: #28536b; -fx-border-width: 2; -fx-background-radius: 8; -fx-border-radius: 8;" />
+   <TextField fx:id="prenomField" prefHeight="30" prefWidth="420" promptText="Prénom" style="-fx-border-color: #28536b; -fx-border-width: 2; -fx-background-radius: 8; -fx-border-radius: 8;" />
+   <DatePicker fx:id="dateNaissancePicker" prefWidth="420" promptText="Date de naissance" style="-fx-border-color: #28536b; -fx-border-width: 2; -fx-background-radius: 8; -fx-border-radius: 8;" />
+   <CheckBox fx:id="handicapeCheck" text="Handicapé ?" style="-fx-text-fill: #28536b; -fx-font-size: 14px; -fx-font-weight: bold;" />
 
-               <!-- Complaint Type selection -->
+   <!-- Complaint Type selection -->
    <HBox alignment="CENTER" spacing="20">
       <Label style="-fx-text-fill: #7ea8be; -fx-font-size: 14px; -fx-font-weight: bold;" text="Complaint Type:" textFill="#7ea8be" />
       <RadioButton fx:id="rbTechnique" style="-fx-text-fill: #28536b; -fx-font-size: 13px;" text="Technical">
@@ -36,12 +44,19 @@
       <RadioButton fx:id="rbPayment" style="-fx-text-fill: #28536b; -fx-font-size: 13px;" text="Payment" toggleGroup="$complaintTypeGroup" />
    </HBox>
 
-   <!-- Container for dynamic complaint details -->
-   <VBox fx:id="complaintDetailsBox" prefWidth="420" spacing="12" />
+   <!-- ComboBox for Suspendable targets -->
+   <ComboBox fx:id="targetComboBox" prefWidth="420" promptText="Select Target (Station or Transport)"
+             style="-fx-border-color: #28536b; -fx-border-width: 2; -fx-background-radius: 8; -fx-border-radius: 8;" />
+
+   <!-- Description field -->
+   <Label text="Description de la réclamation :" style="-fx-text-fill: #7ea8be; -fx-font-weight: bold; -fx-font-size: 14px;" />
+   <TextArea fx:id="descriptionField" prefWidth="420" prefHeight="100" promptText="Entrez la description détaillée de la réclamation ici"
+             style="-fx-border-color: #28536b; -fx-border-width: 2; -fx-background-radius: 8; -fx-border-radius: 8;" wrapText="true" />
 
    <!-- Submit button -->
    <Button onAction="#handleSubmit" prefHeight="35" prefWidth="180" style="-fx-background-color: #7ea8be; -fx-text-fill: #14213D; -fx-font-size: 14px; -fx-background-radius: 8; -fx-cursor: hand; -fx-border-color: #28536b; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Submit Complaint" />
 
+   <!-- Message label for success/error/suspension -->
    <Label fx:id="msgLabel" style="-fx-text-fill: #90ee90; -fx-font-weight: bold; -fx-font-size: 13px; -fx-padding: 5 0 0 0;" />
 
 </VBox>
